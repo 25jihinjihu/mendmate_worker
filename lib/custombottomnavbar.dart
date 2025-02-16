@@ -35,7 +35,7 @@ class _CustomBottomNavBArState extends State<Custombottomnavbar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: .1,
+        toolbarHeight: 0,
         backgroundColor: Color(0xff7879CA),
       ),
       body: _pages[_selectedIndex],

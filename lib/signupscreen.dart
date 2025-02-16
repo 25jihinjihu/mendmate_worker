@@ -35,7 +35,7 @@ class Signupscreen extends StatelessWidget {
 
                 // Title
                 Text(
-                  "Hello User !",
+                  "Hello Worker !",
                   style: GoogleFonts.workSans(
                       fontSize: 24, fontWeight: FontWeight.w500),
                 ),

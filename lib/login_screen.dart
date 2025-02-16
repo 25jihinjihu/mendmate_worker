@@ -25,7 +25,7 @@ class loginpage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "Hello User",
+                  "Hello Worker",
                   style: GoogleFonts.workSans(
                       fontSize: 24, fontWeight: FontWeight.w500),
                 ),

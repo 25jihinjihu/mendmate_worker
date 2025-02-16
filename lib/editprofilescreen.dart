@@ -83,7 +83,7 @@ class Editprofilescreen extends StatelessWidget {
                   Editprofilescreencard(
                     icon: SvgPicture.asset(
                       color: Color(0xff9AA0A5),
-                      'assets/envelope.svg',
+                      'assets/phone-call.svg',
                     ),
                     title: ' Contact Number',
                   ),
@@ -165,7 +165,7 @@ class Editprofilescreen extends StatelessWidget {
                                       padding: const EdgeInsets.only(right: 10),
                                       child: SvgPicture.asset(
                                           color: Color(0xff9AA0A5),
-                                          'assets/envelope.svg'),
+                                          'assets/marker (1).svg'),
                                     ),
                                     suffixIconConstraints: BoxConstraints(
                                         maxHeight: 20, maxWidth: 40)),

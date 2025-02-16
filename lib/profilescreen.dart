@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mendmate_worker/changepassword.dart';
+import 'package:mendmate_worker/earninglistpage.dart';
 import 'package:mendmate_worker/editprofilescreen.dart';
 import 'package:mendmate_worker/login_screen.dart';
 
@@ -9,193 +10,218 @@ class Profilescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.indigo,
-      ),
-      body: Column(
-        children: [
-          Container(
-            width: MediaQuery.of(context).size.width * 10,
-            color: Colors.blue,
-            padding: EdgeInsets.all(10),
-            child: Column(
-              children: [
-                Container(
-                  padding: EdgeInsets.all(10),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    borderRadius:
-                        BorderRadius.vertical(bottom: Radius.circular(30)),
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20),
-                        child: Stack(
-                          children: [
-                            CircleAvatar(
-                                radius: 50,
-                                backgroundImage: NetworkImage(
-                                    'https://randomuser.me/api/portraits/men/85.jpg') // Change this to NetworkImage if needed
-                                ),
-                            Positioned(
-                              bottom: -3,
-                              right: -3,
-                              child: InkWell(
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              Editprofilescreen()));
-                                },
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                      color: Colors.white, // Border color
-                                      width: 3.0, // Border width
-                                    ),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        color: Colors.white,
+        child: Stack(
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height - 450,
+              color: Color(0xff3D56A2),
+              padding: EdgeInsets.all(10),
+              child: Column(
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius:
+                          BorderRadius.vertical(bottom: Radius.circular(30)),
+                    ),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20),
+                          child: Stack(
+                            children: [
+                              CircleAvatar(
+                                  radius: 70,
+                                  backgroundImage: NetworkImage(
+                                      'https://randomuser.me/api/portraits/men/85.jpg') // Change this to NetworkImage if needed
                                   ),
-                                  child: CircleAvatar(
-                                    backgroundColor: Color(0xff3D56A2),
-                                    radius: 18,
-                                    child: Icon(Icons.edit,
-                                        color: Colors.white, size: 18),
+                              Positioned(
+                                bottom: 0,
+                                right: 0,
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                Editprofilescreen()));
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      border: Border.all(
+                                        color:
+                                            Color(0xff3D56A2), // Border color
+                                        width: 3.0, // Border width
+                                      ),
+                                    ),
+                                    child: CircleAvatar(
+                                      backgroundColor: Colors.white,
+                                      radius: 18,
+                                      child: SvgPicture.asset('assets/Edit.svg',
+                                          color: Colors.black, height: 18),
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 10),
-                      Text("Ashutosh Pandey",
+                        SizedBox(height: 10),
+                        Text("Ashutosh Pandey",
+                            style: GoogleFonts.workSans(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white)),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "Ashutosh@gmail.com",
                           style: GoogleFonts.workSans(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.black)),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Ashutosh@gmail.com",
-                        style: GoogleFonts.workSans(
-                            fontSize: 14,
-                            color: Color(
-                              0xff6C757D,
-                            ),
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ),
-          Card(
-            margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Padding(
-              padding: EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Column(
-                    children: [
-                      Text(
-                        '259+',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
-                      ),
-                      Text('Service Delivered'),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        '05+',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
-                      ),
-                      Text('Years of Experience'),
-                    ],
+                              fontSize: 14,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Changepasswordscreen()));
-              },
+            SizedBox(
+              height: 10,
+            ),
+            Positioned(
+              left: 20,
+              top: 240,
               child: Container(
-                color: Color(0xffF6F7F9),
-                height: 35,
-                child: Column(
-                  children: [
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Text('Change Password',
-                            style: GoogleFonts.roboto(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black)),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            child: Container(
-              color: Color(0xffF6F7F9),
-              height: 30,
-              child: Align(
-                alignment: Alignment.centerLeft,
+                height: 110,
+                width: MediaQuery.of(context).size.width - 80,
+                decoration: BoxDecoration(
+                    color: Color(0XFFF6F7F9),
+                    borderRadius: BorderRadiusDirectional.circular(8)),
+                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Text('Earning List',
-                      style: GoogleFonts.roboto(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black)),
+                  padding: EdgeInsets.all(20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            '259+',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          Text('Service Delivered'),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            '05+',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          Text('Years of Experience'),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  fixedSize: Size.fromWidth(300),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadiusDirectional.circular(12)),
-                  backgroundColor: Color(0xff3C549F)),
-              onPressed: () {
-                _showPopuplogout(context);
-              },
-              child: Text(
-                  style: GoogleFonts.workSans(
-                      fontWeight: FontWeight.w600, color: Colors.white),
-                  'Logout'),
-            ),
-          ),
-        ],
+            Positioned(
+              left: 10,
+              bottom: 50,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      Changepasswordscreen()));
+                        },
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.lock,
+                              color: Color(0xff7E868D),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text('Change Password',
+                                style: GoogleFonts.workSans(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black)),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Earninglistpage()));
+                        },
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.rotate_left,
+                              color: Color(0xff7E868D),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text('Earning List',
+                                style: GoogleFonts.workSans(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black)),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 100, right: 100, top: 90),
+                        child: TextButton(
+                          onPressed: () {
+                            _showPopuplogout(context);
+                          },
+                          child: Text(
+                              style: GoogleFonts.workSans(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color(0xff3C549F)),
+                              'Logout'),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
