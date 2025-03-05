@@ -2,10 +2,10 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:mendmate_worker/Home_Screen.dart';
 import 'package:mendmate_worker/Notification_Screen.dart';
 import 'package:mendmate_worker/bookingscreen.dart';
-import 'package:mendmate_worker/profilescreen.dart';
+import 'package:mendmate_worker/features/profile/profilescreen.dart';
+import 'package:mendmate_worker/home_section.dart';
 
 class Custombottomnavbar extends StatefulWidget {
   const Custombottomnavbar({super.key});
@@ -19,7 +19,7 @@ class _CustomBottomNavBArState extends State<Custombottomnavbar> {
 
   // Screens for each tab
   static final List<Widget> _pages = <Widget>[
-    HomeScreen(),
+    HomeSection(),
     Bookingscreen(),
     NotificationScreen(),
     Profilescreen()

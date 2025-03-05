@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mendmate_worker/chatscreen.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeSection extends StatelessWidget {
   final List<Map<String, String>> reviews = [
     {
       'name': 'Donna Bins',
@@ -62,6 +62,8 @@ class HomeScreen extends StatelessWidget {
           'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.'
     },
   ];
+
+  HomeSection({super.key});
 
   @override
   Widget build(BuildContext context) {

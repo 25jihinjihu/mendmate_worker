@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:mendmate_worker/login_screen.dart';
+import 'package:mendmate_worker/features/sign_in/login_screen.dart';
 
 class Loadingscreen extends StatefulWidget {
   const Loadingscreen({super.key});
@@ -14,7 +14,7 @@ class _LoadingscreenState extends State<Loadingscreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 12), () {
+    Future.delayed(Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => LoginScreen()),
