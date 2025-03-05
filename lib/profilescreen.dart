@@ -285,7 +285,7 @@ class Profilescreen extends StatelessWidget {
                             transitionDuration: Duration(milliseconds: 5),
                             pageBuilder:
                                 (context, animation, secondaryAnimation) =>
-                                    loginpage(),
+                                    LoginScreen(),
                             transitionsBuilder: (context, animation,
                                 secondaryAnimation, child) {
                               return FadeTransition(

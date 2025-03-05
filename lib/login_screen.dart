@@ -4,8 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mendmate_worker/custombottomnavbar.dart';
 import 'package:mendmate_worker/signupscreen.dart';
 
-class loginpage extends StatelessWidget {
-  const loginpage({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

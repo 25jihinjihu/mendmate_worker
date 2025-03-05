@@ -17,7 +17,7 @@ class _LoadingscreenState extends State<Loadingscreen> {
     Future.delayed(Duration(seconds: 12), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => loginpage()),
+        MaterialPageRoute(builder: (context) => LoginScreen()),
       );
     });
   }
